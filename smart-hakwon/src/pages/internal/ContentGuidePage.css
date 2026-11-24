@@ -1,0 +1,5 @@
+/* Styles scoped to the internal content guide page */
+.content-guide a{color:#1B3B6F;text-decoration:underline}
+.content-guide a:hover{color:#0B1B33}
+.content-guide .sh-serif{font-family:'Nanum Myeongjo',serif}
+.content-guide .c-url{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;color:#33425D;word-break:break-all}
