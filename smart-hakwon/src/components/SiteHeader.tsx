@@ -26,6 +26,7 @@ export function SiteHeader({ locale, page }: SiteHeaderProps) {
     <NavLink
       key={key}
       to={pathFor(key, locale)}
+      end
       aria-current={key === page ? 'page' : undefined}
     >
       {navLabels[locale][key]}

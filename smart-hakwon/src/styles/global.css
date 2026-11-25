@@ -74,6 +74,11 @@ h1,h2,h3{margin:0;color:var(--navy)}
   .nav{gap:20px}
   .right{gap:12px}
 }
+.logo{flex-shrink:0}
+@media (max-width:1120px){
+  .nav{gap:16px}
+  .nav a{font-size:14.5px}
+}
 
 /* hero */
 .hero{background:var(--tint);padding:88px var(--pad)}

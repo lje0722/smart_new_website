@@ -40,8 +40,9 @@ export function pathFor(page: PageKey, locale: Locale): string {
 export const pageSlugs = slugs;
 
 /** Labels used in the header menu, mobile menu and footer. */
-export const navLabels: Record<Locale, Record<Exclude<PageKey, 'home'>, string>> = {
+export const navLabels: Record<Locale, Record<PageKey, string>> = {
   en: {
+    home: 'Home',
     about: 'About',
     timetable: 'Timetable',
     intensive: 'Intensive Class',
@@ -51,6 +52,7 @@ export const navLabels: Record<Locale, Record<Exclude<PageKey, 'home'>, string>>
     privacy: 'Privacy Policy',
   },
   ko: {
+    home: '홈',
     about: '학원 소개',
     timetable: '시간표',
     intensive: '방학 특강',
@@ -62,7 +64,8 @@ export const navLabels: Record<Locale, Record<Exclude<PageKey, 'home'>, string>>
 };
 
 /** Order of the items in the main menu (header + mobile menu). */
-export const mainNav: Exclude<PageKey, 'home' | 'privacy'>[] = [
+export const mainNav: Exclude<PageKey, 'privacy'>[] = [
+  'home',
   'about',
   'timetable',
   'intensive',
@@ -72,7 +75,7 @@ export const mainNav: Exclude<PageKey, 'home' | 'privacy'>[] = [
 ];
 
 /** Order of the items in the footer menu. */
-export const footerNav: Exclude<PageKey, 'home'>[] = [...mainNav, 'privacy'];
+export const footerNav: PageKey[] = [...mainNav, 'privacy'];
 
 export const ui: Record<
   Locale,
